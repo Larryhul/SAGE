@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="430" viewBox="0 0 1440 430" role="img" aria-labelledby="title desc">
+<title id="title">SAGE</title><desc id="desc">A socially-aware generative engine. Heterogeneous interactions  /  Joint diffusion  /  Safety-social guidance.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101C35"/><stop offset="1" stop-color="#172D48"/></linearGradient></defs>
+<rect width="1440" height="430" rx="24" fill="#101C35"/>
+<circle cx="1320" cy="82" r="125" fill="#FFAB89" opacity="0.06"/>
+<circle cx="1320" cy="82" r="80" fill="none" stroke="#FFAB89" opacity="0.2"/>
+<g font-family="sans-serif"><text x="64" y="66" font-size="13" fill="#FFAB89" letter-spacing="4">MULTI-ROBOT SOCIAL NAVIGATION</text>
+<text x="60" y="155" font-size="88" font-weight="700" fill="#FFFFFF" letter-spacing="-3">SAGE</text>
+<text x="64" y="207" font-size="30" fill="#F2F5FB">A socially-aware generative engine</text>
+<text x="64" y="242" font-size="17" fill="#AFBED5">Heterogeneous interactions  /  Joint diffusion  /  Safety-social guidance</text><rect x="64" y="278" width="420" height="104" rx="16" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.13"/><text x="86" y="310" fill="#FFAB89" font-size="13" letter-spacing="2">01 / ENCODE</text><text x="86" y="347" fill="#EBF1FC" font-size="20">Directed heterogeneous graph</text><rect x="504" y="278" width="420" height="104" rx="16" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.13"/><text x="526" y="310" fill="#FFAB89" font-size="13" letter-spacing="2">02 / GENERATE</text><text x="526" y="347" fill="#EBF1FC" font-size="20">Joint robot + entity futures</text><rect x="944" y="278" width="420" height="104" rx="16" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.13"/><text x="966" y="310" fill="#FFAB89" font-size="13" letter-spacing="2">03 / GUIDE</text><text x="966" y="347" fill="#EBF1FC" font-size="20">Safety, comfort and progress</text></g></svg>

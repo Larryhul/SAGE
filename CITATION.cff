@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this implementation, please cite the associated manuscript."
+type: software
+title: "SAGE research implementation"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/Larryhul/SAGE"
+url: "https://github.com/Larryhul/SAGE"
+authors:
+  - family-names: "Hu"
+    given-names: "Lan"
+  - family-names: "Liwang"
+    given-names: "Minghui"
+  - family-names: "Zhu"
+    given-names: "Wenbo"
+  - family-names: "Yi"
+    given-names: "Xinlei"
+  - family-names: "Hong"
+    given-names: "Yiguang"
+  - family-names: "Wang"
+    given-names: "Xianbin"
+  - family-names: "Jiao"
+    given-names: "Zhenzhen"
+  - family-names: "Hosseinalipour"
+    given-names: "Seyyedali"
+preferred-citation:
+  type: unpublished
+  title: "SAGE: A Socially-Aware Generative Engine for Heterogeneous Multi-Agent Navigation"
+  authors:
+    - family-names: "Hu"
+      given-names: "Lan"
+    - family-names: "Liwang"
+      given-names: "Minghui"
+    - family-names: "Zhu"
+      given-names: "Wenbo"
+    - family-names: "Yi"
+      given-names: "Xinlei"
+    - family-names: "Hong"
+      given-names: "Yiguang"
+    - family-names: "Wang"
+      given-names: "Xianbin"
+    - family-names: "Jiao"
+      given-names: "Zhenzhen"
+    - family-names: "Hosseinalipour"
+      given-names: "Seyyedali"
+  notes: "Author manuscript; see paper/README.md for exact version identity."

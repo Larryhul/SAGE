@@ -1,0 +1,13 @@
+num_robots,guided,checkpoint,elapsed_seconds
+3,guided,experiments/sage_synthetic_nr3_ne50/synthetic_sage_epoch50.pt,95
+3,unguided,experiments/sage_synthetic_nr3_ne50/synthetic_sage_epoch50.pt,89
+6,guided,experiments/sage_synthetic_nr6_ne50/synthetic_sage_epoch50.pt,101
+6,unguided,experiments/sage_synthetic_nr6_ne50/synthetic_sage_epoch50.pt,94
+9,guided,experiments/sage_synthetic_nr9_ne50/synthetic_sage_epoch50.pt,109
+9,unguided,experiments/sage_synthetic_nr9_ne50/synthetic_sage_epoch50.pt,100
+12,guided,experiments/sage_synthetic_nr12_ne50/synthetic_sage_epoch50.pt,117
+12,unguided,experiments/sage_synthetic_nr12_ne50/synthetic_sage_epoch50.pt,107
+16,guided,experiments/sage_synthetic_nr16_ne50/synthetic_sage_epoch50.pt,140
+16,unguided,experiments/sage_synthetic_nr16_ne50/synthetic_sage_epoch50.pt,129
+20,guided,experiments/sage_synthetic_nr20_ne50/synthetic_sage_epoch50.pt,153
+20,unguided,experiments/sage_synthetic_nr20_ne50/synthetic_sage_epoch50.pt,139

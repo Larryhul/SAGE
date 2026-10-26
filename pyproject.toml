@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sage-navigation"
+version = "0.1.0"
+description = "Socially-aware joint trajectory generation for heterogeneous multi-agent navigation"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "third_party/notices/*"]
+requires-python = ">=3.9"
+dependencies = ["torch>=2.0", "numpy", "scipy", "pandas", "PyYAML", "matplotlib", "tqdm", "dill", "tensorboard"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+legacy = ["ncls", "orjson", "h5py", "tensorboardX"]
+
+[project.urls]
+Repository = "https://github.com/Larryhul/SAGE"
+Issues = "https://github.com/Larryhul/SAGE/issues"
+
+[tool.setuptools]
+py-modules = ["mid"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sage*", "models*", "dataset*", "environment*", "evaluation*", "utils*"]
+exclude = ["tests*", "third_party*", "data", "data.*", "paper*", "results*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
