@@ -11,4 +11,4 @@ This directory contains 44 retained CSVs. Numerical fields are unchanged; origin
 | [selection](selection) | Validation and candidate-epoch records | Model-selection evidence |
 | [tables](tables) | Aggregated guidance and role tables | Compact summaries |
 
-Use the [confirmed manuscript](../paper/README.md) to identify the reported protocol. Selection records and prior controls are important intermediate evidence and retain that status.
+Use the [arXiv preprint](https://arxiv.org/abs/2607.16619) to identify the reported protocol. Selection records and prior controls are important intermediate evidence and retain that status.

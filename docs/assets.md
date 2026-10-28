@@ -3,7 +3,7 @@
 ## Included
 
 - Source code, configurations and experiment wrappers.
-- 44 selected result CSVs, the confirmed manuscript package and rendered method overview.
+- 44 selected result CSVs and rendered method overview.
 - Checksums for 30 retained checkpoints in [provenance/checkpoints.csv](../provenance/checkpoints.csv).
 
 ## External inputs

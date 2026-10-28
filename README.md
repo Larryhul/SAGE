@@ -6,7 +6,7 @@
   <a href="docs/installation.md">Installation</a> ·
   <a href="docs/reproduction.md">Reproduction</a> ·
   <a href="results/README.md">Results</a> ·
-  <a href="paper/README.md">Paper</a> ·
+  <a href="https://arxiv.org/abs/2607.16619">Paper (arXiv)</a> ·
   <a href="README.zh-CN.md">中文</a>
 </p>
 
@@ -50,7 +50,7 @@ ETH/UCY uses pedestrian trajectories with a target-as-robot proxy and speed-deri
 | [Reproduction](docs/reproduction.md) | Data checks, training, evaluation and result interpretation |
 | [Selected results](results/README.md) | Benchmarks, ablations, guidance, scaling and selection records |
 | [Assets](docs/assets.md) | Dataset sources and 30 retained checkpoint checksums |
-| [Manuscript](paper/README.md) | Confirmed 15-page submission PDF and editable source |
+| [Paper on arXiv](https://arxiv.org/abs/2607.16619) | Public preprint and version history |
 
 ## Repository layout
 
@@ -59,7 +59,6 @@ sage/          SAGE models, guidance, adapters and experiment entry points
 configs/       Research configurations
 scripts/       Convenience wrappers for training and evaluation
 results/       Selected numerical results
-paper/         Versioned manuscript and figures
 docs/          Installation, reproduction and asset guides
 provenance/    File origins and artifact checksums
 ```
@@ -68,7 +67,7 @@ The top-level `models/`, `dataset/`, `environment/`, `evaluation/` and `utils/` 
 
 ## Citation and acknowledgments
 
-Use [CITATION.cff](CITATION.cff) or [the BibTeX entry](docs/citation.bib). The manuscript is identified as an unpublished manuscript; this repository makes no acceptance claim.
+Use [CITATION.cff](CITATION.cff) or [the BibTeX entry](docs/citation.bib). The associated preprint is available as [arXiv:2607.16619](https://arxiv.org/abs/2607.16619).
 
 The baseline and data compatibility code builds on [MID](https://github.com/Gutianpei/MID) and Trajectron++. Preserve their attribution when using those modules. See [third-party notices](THIRD_PARTY_NOTICES.md) and [license status](LICENSE).
 

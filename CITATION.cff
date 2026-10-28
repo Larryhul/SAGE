@@ -24,7 +24,7 @@ authors:
   - family-names: "Hosseinalipour"
     given-names: "Seyyedali"
 preferred-citation:
-  type: unpublished
+  type: article
   title: "SAGE: A Socially-Aware Generative Engine for Heterogeneous Multi-Agent Navigation"
   authors:
     - family-names: "Hu"
@@ -43,4 +43,6 @@ preferred-citation:
       given-names: "Zhenzhen"
     - family-names: "Hosseinalipour"
       given-names: "Seyyedali"
-  notes: "Author manuscript; see paper/README.md for exact version identity."
+  year: 2026
+  journal: "arXiv preprint arXiv:2607.16619"
+  url: "https://arxiv.org/abs/2607.16619"

@@ -4,7 +4,7 @@
 
 ![SAGE 方法概览](docs/assets/hero.png)
 
-[English](README.md) · [安装](docs/installation.md) · [复现实验](docs/reproduction.md) · [精选结果](results/README.md) · [论文](paper/README.md)
+[English](README.md) · [安装](docs/installation.md) · [复现实验](docs/reproduction.md) · [精选结果](results/README.md) · [论文（arXiv）](https://arxiv.org/abs/2607.16619)
 
 ## 开始运行
 
@@ -20,7 +20,7 @@ python -m sage.experiments.smoke_test --device cpu --stride 10
 
 - `sage/`：核心模型、引导、数据适配器和实验入口。
 - `results/`：44 份精选 CSV，涵盖基准、消融、引导、规模与模型选择。
-- `paper/submission/`：已确认的 15 页最终投稿 PDF 及配套源包。
+- 论文与版本记录：[arXiv:2607.16619](https://arxiv.org/abs/2607.16619)。
 - `provenance/`：文件来源、校验值和 30 个保留权重的清单。
 
 原始数据、权重、缓存和内部文档未纳入源码仓库。下载情况和所需路径见[资产说明](docs/assets.md)。ETH/UCY 使用行人轨迹中的机器人代理与速度伪角色，其证据范围与真实语义标签实验分别说明。
