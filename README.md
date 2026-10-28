@@ -63,12 +63,8 @@ docs/          Installation, reproduction and asset guides
 provenance/    File origins and artifact checksums
 ```
 
-The top-level `models/`, `dataset/`, `environment/`, `evaluation/` and `utils/` retain MID/Trajectron++ compatibility code. Large inputs and weights are distributed separately from source control; current availability is explicit in [assets](docs/assets.md).
+Dataset sources and model availability are listed in the [asset guide](docs/assets.md).
 
-## Citation and acknowledgments
+## Citation
 
-Use [CITATION.cff](CITATION.cff) or [the BibTeX entry](docs/citation.bib). The associated preprint is available as [arXiv:2607.16619](https://arxiv.org/abs/2607.16619).
-
-The baseline and data compatibility code builds on [MID](https://github.com/Gutianpei/MID) and Trajectron++. Preserve their attribution when using those modules. See [third-party notices](THIRD_PARTY_NOTICES.md) and [license status](LICENSE).
-
-[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [TRACER companion project](https://github.com/Larryhul/TRACER)
+If you use SAGE in your research, please cite the [paper](https://arxiv.org/abs/2607.16619). Citation details: [BibTeX](docs/citation.bib) · [CITATION.cff](CITATION.cff).

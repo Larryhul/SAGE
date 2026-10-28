@@ -24,5 +24,3 @@ python -m sage.experiments.smoke_test --device cpu --stride 10
 - `provenance/`：文件来源、校验值和 30 个保留权重的清单。
 
 原始数据、权重、缓存和内部文档未纳入源码仓库。下载情况和所需路径见[资产说明](docs/assets.md)。ETH/UCY 使用行人轨迹中的机器人代理与速度伪角色，其证据范围与真实语义标签实验分别说明。
-
-SAGE 与 TRACER 都沿用 `sage` 包名，请分别安装到独立环境。
