@@ -2,6 +2,7 @@
 
 ## 2026-10-28
 
+- Add unit tests for metrics, training step and guided/unguided generation, and run them in CI.
 - Publish paper and citation links to arXiv.
 - Remove bundled manuscript PDFs, LaTeX sources and manuscript figures from the current source release.
 

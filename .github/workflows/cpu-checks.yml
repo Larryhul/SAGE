@@ -29,3 +29,5 @@ jobs:
         run: python tools/check_repository.py
       - name: Run core check
         run: python -m sage.experiments.smoke_test --device cpu --stride 10
+      - name: Run unit tests
+        run: python -m pytest -q
