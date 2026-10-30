@@ -1,0 +1,41 @@
+{
+  "project": "SAGE",
+  "version": "0.2.0",
+  "purpose": "Original goal-conditioned research checkpoints for ETH/UCY and SDD.",
+  "filename": "sage-research-checkpoints-v0.2.0.zip",
+  "url": "https://github.com/Larryhul/SAGE/releases/download/v0.2.0/sage-research-checkpoints-v0.2.0.zip",
+  "bytes": 11922048,
+  "sha256": "0de8236ab9c9ed39558114e0c1cb7ed358979e41214840817c9eee81232efef4",
+  "files": [
+    {
+      "name": "eth_sage_epoch100.pt",
+      "bytes": 2157979,
+      "sha256": "173734637e4e0b5638690cb4f28b69b2d540d7eecb5e3bf43d104a920cbd7229"
+    },
+    {
+      "name": "hotel_sage_epoch100.pt",
+      "bytes": 2158105,
+      "sha256": "615920dc6dac4ff655e547b39596cef01dfc5a079b56d3d6177467b739b2e204"
+    },
+    {
+      "name": "univ_sage_epoch100.pt",
+      "bytes": 2158042,
+      "sha256": "485c605b555a03212f09ce3a26ab87b856895925e989e1aee9559c263c7f87c9"
+    },
+    {
+      "name": "zara1_sage_epoch100.pt",
+      "bytes": 2158105,
+      "sha256": "1fd93cdd3e60a1364946a268fccb9046a3b185874c7015b2911359864e974c44"
+    },
+    {
+      "name": "zara2_sage_epoch100.pt",
+      "bytes": 2158105,
+      "sha256": "c77608a01f0a99bc8af31263ec5e5900b9f8bef2081f32f3a7ad4f7c74e407b8"
+    },
+    {
+      "name": "sdd_sage_epoch80.pt",
+      "bytes": 2158108,
+      "sha256": "f51d6b9bc97494883ff3b9987817bf5ccba91cb1657f010a84f4ef308b03c298"
+    }
+  ]
+}

@@ -1,15 +1,17 @@
 # Verification
 
-The standalone publication directory was checked locally on 2026-10-27.
+The release checks cover installation, model serialization, the public CPU regression suite and the [demonstration](demo.md). CI runs on Linux and Windows.
 
-| Check | Outcome |
-| --- | --- |
-| Synthetic forward/backward and guided generation | Passed, CPU; loss `1.298166` |
-| One-epoch synthetic training and model serialization | Passed; finite loss and checkpoint saved |
-| Wheel build and separate-target installation | Passed; installed-package CPU smoke check also produced loss `1.298166` |
-| Retained source identity and numerical CSV preservation | Passed for 196 copied source/asset files |
-| Credential-pattern, internal-material and file-size scan | Passed for the publication candidate files |
+Local v0.2.0 checks on Windows passed all five tests under Python 3.12 and the legacy Python 3.9 environment. All six released research checkpoints passed strict state loading and finite CPU generation. The installed wheel also ran the animated demo outside the source directory.
 
-These checks exercise the distributed implementation and selected file identities. They do not rerun benchmark training or establish physical-robot deployment performance. Asset availability and data requirements are stated in [assets](assets.md).
+```bash
+python tools/check_repository.py
+python -m pytest -q
+python -m sage.demo --output outputs/demo
+```
 
-The GitHub workflow runs the source/asset check and CPU smoke test on push and pull request. A live GitHub workflow result is separate from the local results above.
+The asset check verifies retained file hashes and local documentation links. Test output reports its passed and skipped cases. Tests requiring CUDA or archived formal-run assets carry explicit prerequisites.
+
+The release process also builds a wheel, installs it in a separate directory and checks imports and the demo outside the source tree. Original research checkpoints are checked against their retained SHA-256 and loaded for a finite CPU generation check.
+
+These are CPU software checks. Full benchmark reruns and physical-robot validation are separate research workflows.

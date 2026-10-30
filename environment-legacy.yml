@@ -1,0 +1,23 @@
+name: sage-real
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch
+  - pytorch-cuda=11.8
+  - numpy
+  - scipy
+  - pandas
+  - tqdm
+  - pyyaml
+  - matplotlib
+  - tensorboard
+  - pip
+  - pip:
+      - dill
+      - ncls
+      - orjson
+      - tensorboardX
