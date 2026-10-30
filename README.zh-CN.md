@@ -1,26 +1,43 @@
 # SAGE
 
-**SAGE 将异构交互编码、联合轨迹扩散与安全社会引导结合起来，同时生成机器人计划和周围实体的未来轨迹。** 推理时通过可微能量引导调整机器人运动，无需重新训练。
+**SAGE 联合生成机器人计划与周围实体的未来轨迹，并通过安全、社会规范及任务目标引导调整机器人运动。**
 
-![SAGE 方法概览](docs/assets/hero.png)
+[English](README.md) · [论文](https://arxiv.org/abs/2607.16619) · [实验说明](docs/reproduction.md) · [模型](docs/models.md) · [结果](results/README.md)
 
-[English](README.md) · [安装](docs/installation.md) · [复现实验](docs/reproduction.md) · [精选结果](results/README.md) · [论文（arXiv）](https://arxiv.org/abs/2607.16619)
+## 快速开始
 
-## 开始运行
-
-按[安装说明](docs/installation.md)建立独立环境，在仓库根目录运行：
+推荐 Python 3.12。按[安装说明](docs/installation.md)建立环境，在仓库根目录运行：
 
 ```bash
-python -m sage.experiments.smoke_test --device cpu --stride 10
+python -m pip install -e ".[dev]"
+python -m sage.demo --output outputs/demo
 ```
 
-该示例无需外部数据，检查前向计算、反向传播和带引导的轨迹生成。论文结果还需要对应数据、配置和训练权重。
+示例展示交叉场景中的轨迹优化，周围实体的预测保持固定。输出动画、最终轨迹图和能量变化记录。
 
-## 仓库内容
+![SAGE CPU 演示](docs/assets/demo.gif)
 
-- `sage/`：核心模型、引导、数据适配器和实验入口。
-- `results/`：44 份精选 CSV，涵盖基准、消融、引导、规模与模型选择。
-- 论文与版本记录：[arXiv:2607.16619](https://arxiv.org/abs/2607.16619)。
-- `provenance/`：文件来源、校验值和 30 个保留权重的清单。
+示例的输入与输出说明见[演示指南](docs/demo.md)。
 
-原始数据、权重、缓存和内部文档未纳入源码仓库。下载情况和所需路径见[资产说明](docs/assets.md)。ETH/UCY 使用行人轨迹中的机器人代理与速度伪角色，其证据范围与真实语义标签实验分别说明。
+## 模型与结果
+
+提供 ETH/UCY 五个场景与 SDD 的六份原始目标条件研究检查点。
+
+```bash
+python tools/download_models.py
+```
+
+下载完成后自动校验文件。[模型说明](docs/models.md)给出模型身份与使用方式。[44 份精选结果](results/README.md)按实验协议组织；数据准备、训练和评估命令见[实验指南](docs/reproduction.md)。
+
+## 开发检查
+
+```bash
+python tools/check_repository.py
+python -m pytest -q
+```
+
+Linux 与 Windows 均运行 CPU 检查。依赖归档实验资产或 CUDA 的测试会明确报告跳过原因。
+
+## 引用
+
+使用 SAGE 开展研究时，请引用[论文](https://arxiv.org/abs/2607.16619)。[BibTeX](docs/citation.bib) · [CITATION.cff](CITATION.cff)。

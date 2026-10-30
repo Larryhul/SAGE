@@ -1,70 +1,79 @@
-<p align="center"><img src="docs/assets/hero.png" alt="SAGE: socially-aware joint trajectory generation" width="100%"></p>
+<p align="center"><img src="docs/assets/hero.png" alt="SAGE" width="100%"></p>
 
 <h3 align="center">A Socially-Aware Generative Engine for Heterogeneous Multi-Agent Navigation</h3>
 
 <p align="center">
-  <a href="docs/installation.md">Installation</a> ·
-  <a href="docs/reproduction.md">Reproduction</a> ·
-  <a href="results/README.md">Results</a> ·
-  <a href="https://arxiv.org/abs/2607.16619">Paper (arXiv)</a> ·
-  <a href="README.zh-CN.md">中文</a>
+  <a href="https://github.com/Larryhul/SAGE/actions/workflows/cpu-checks.yml"><img alt="CPU checks" src="https://github.com/Larryhul/SAGE/actions/workflows/cpu-checks.yml/badge.svg"></a>
+  <a href="https://arxiv.org/abs/2607.16619"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2607.16619-b31b1b.svg"></a>
+  <a href="LICENSE"><img alt="Code license: MIT" src="https://img.shields.io/badge/code-MIT-0d9488.svg"></a>
 </p>
 
-**SAGE jointly generates robot plans and surrounding-agent futures, then refines robot motion with safety and social guidance.** A directed heterogeneous graph captures agent roles and asymmetric interactions; a conditional diffusion model models joint motion; differentiable guidance adds collision avoidance, comfort, kinematics and task progress during sampling.
+<p align="center"><a href="#quick-start">Quick start</a> · <a href="docs/reproduction.md">Experiments</a> · <a href="docs/models.md">Models</a> · <a href="results/README.md">Results</a> · <a href="https://arxiv.org/abs/2607.16619">Paper</a> · <a href="README.zh-CN.md">中文</a></p>
 
-## Method
+**SAGE jointly generates robot plans and surrounding-agent trajectories, then refines robot motion with safety and social guidance.**
 
-<p align="center"><img src="docs/assets/method.png" alt="SAGE framework: heterogeneous graph encoding, conditional diffusion and bounded robot-only safety-social guidance" width="490"></p>
-
-| Component | Implementation | Purpose |
-| --- | --- | --- |
-| Heterogeneous interaction encoder | [`sage/models/`](sage/models) | Encode roles, geometry and directed relations |
-| Joint trajectory diffusion | [`sage/models/sage_model.py`](sage/models/sage_model.py) | Generate robot and entity futures together |
-| Safety-social guidance | [`sage/guidance/`](sage/guidance) | Refine robot plans during inference without retraining |
-| Scene adapters and metrics | [`sage/data/`](sage/data) · [`sage/evaluation/`](sage/evaluation) | Connect datasets, batching and evaluation |
+- **Encode heterogeneous interactions:** directed, role-aware graph representations.
+- **Generate joint futures:** conditional diffusion for robot plans and entity trajectories.
+- **Refine robot motion:** differentiable safety, social, kinematic and goal guidance at inference.
 
 ## Quick start
 
-Use a dedicated Python environment; Python 3.9 is the original SAGE environment target. Follow [installation](docs/installation.md), then run from this repository root:
+Use Python 3.12 and follow the [installation guide](docs/installation.md) to create an environment. From this repository:
 
 ```bash
-python -m sage.experiments.smoke_test --device cpu --stride 10
+python -m pip install -e ".[dev]"
+python -m sage.demo --output outputs/demo
 ```
 
-This data-free example runs forward and backward passes and guided trajectory generation. A successful run prints a finite loss and diagnostics. It checks the implementation; paper experiments require their datasets, configurations and trained checkpoints.
+The CPU example refines a crossing-scene robot trajectory while keeping entity predictions fixed. It writes an animation, a final plot and an energy trace.
 
-For an end-to-end synthetic training example:
+![SAGE CPU demonstration](docs/assets/demo.gif)
 
-```bash
-python -m sage.experiments.train_sage --device cpu --epochs 1 --save experiments/example/sage.pt
-```
+See [the demo guide](docs/demo.md) for inputs, outputs and interpretation.
 
-## Experiments and evidence
+## Method
 
-The manuscript evaluates ETH/UCY, Stanford Drone Dataset and controlled synthetic navigation, including guidance trade-offs, ablations and robot-count scaling. The [44 retained CSVs](results/README.md) preserve the selected numerical records and important model-selection evidence.
+<p align="center"><img src="docs/assets/method.png" alt="SAGE method overview" width="490"></p>
 
-ETH/UCY uses pedestrian trajectories with a target-as-robot proxy and speed-derived role labels. This adapter evaluates controlled navigation and pseudo-heterogeneity; SDD semantic labels and synthetic settings provide different evidence. See the [reproduction guide](docs/reproduction.md) for the protocol and interpretation of each result group.
+## Experiments and results
 
-| Start here | Contents |
+| Setting | Retained results |
 | --- | --- |
-| [Reproduction](docs/reproduction.md) | Data checks, training, evaluation and result interpretation |
-| [Selected results](results/README.md) | Benchmarks, ablations, guidance, scaling and selection records |
-| [Assets](docs/assets.md) | Dataset sources and 30 retained checkpoint checksums |
-| [Paper on arXiv](https://arxiv.org/abs/2607.16619) | Public preprint and version history |
+| ETH/UCY | Prediction, guidance and ablation records using a target-as-robot proxy |
+| Stanford Drone Dataset | Navigation results using semantic annotations |
+| Synthetic navigation | Guidance trade-offs and robot-count scaling |
+
+The [result index](results/README.md) identifies the protocols and status of 44 retained CSV files. Commands and required inputs are in the [experiment guide](docs/reproduction.md).
+
+## Models
+
+Six original goal-conditioned research checkpoints are available for ETH/UCY and SDD.
+
+```bash
+python tools/download_models.py
+```
+
+Downloads are verified against the release checksum. See [model details](docs/models.md) for checkpoint identity and use.
+
+## Development
+
+```bash
+python tools/check_repository.py
+python -m pytest -q
+```
+
+CPU checks run on Linux and Windows. Tests requiring archived experiment outputs or CUDA report their prerequisites through explicit skips. See [verification](docs/verification.md).
 
 ## Repository layout
 
 ```text
-sage/          SAGE models, guidance, adapters and experiment entry points
-configs/       Research configurations
-scripts/       Convenience wrappers for training and evaluation
-results/       Selected numerical results
-docs/          Installation, reproduction and asset guides
-provenance/    File origins and artifact checksums
+sage/          Models, guidance, data adapters and experiment modules
+configs/       Dataset and ablation configurations
+results/       Selected numerical records
+docs/          Setup, examples and experiment guides
+provenance/    File origins and checksums
 ```
-
-Dataset sources and model availability are listed in the [asset guide](docs/assets.md).
 
 ## Citation
 
-If you use SAGE in your research, please cite the [paper](https://arxiv.org/abs/2607.16619). Citation details: [BibTeX](docs/citation.bib) · [CITATION.cff](CITATION.cff).
+Please cite the [paper](https://arxiv.org/abs/2607.16619) when using SAGE in research. [BibTeX](docs/citation.bib) · [CITATION.cff](CITATION.cff).

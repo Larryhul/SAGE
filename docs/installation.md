@@ -1,31 +1,49 @@
-# Installation
+# Installing SAGE
 
-## Environment
+## CPU environment
 
-The original SAGE Conda specification targets Python 3.9 and CUDA 11.8. The CPU smoke check is validated separately from training.
-
-Create a dedicated environment in this repository:
+Python 3.12 is the standard development environment.
 
 ```bash
 python -m venv .venv
-# Linux / macOS
+```
+
+Activate it on Linux/macOS:
+
+```bash
 source .venv/bin/activate
-# Windows PowerShell
-# .venv\Scripts\Activate.ps1
+```
+
+Or in Windows PowerShell:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Install the CPU dependencies and project:
+
+```bash
 python -m pip install --upgrade pip
 python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 python -m pip install -e ".[dev]"
+python -m sage.demo --output outputs/demo
 ```
 
-For GPU training, install a PyTorch build compatible with the machine's CUDA runtime before installing this project. Legacy MID/pickle pipelines additionally use `python -m pip install -e ".[legacy]"`.
+The [demo guide](demo.md) describes the generated outputs. Run experiments from the repository root so configuration paths resolve consistently.
 
-Run experiment commands from the repository root because configurations and artifacts use relative paths. An editable install makes Python imports available; it does not download data or weights.
+## Research environments
 
-## Check the installation
+Install a CUDA-compatible PyTorch build for GPU training. The optional `legacy` dependencies support archived trajectory inputs:
+
+```bash
+python -m pip install -e ".[legacy]"
+```
+
+The original Python 3.9 / CUDA 11.8 environment is preserved in `environment-legacy.yml` for historical reproducibility. Current CPU development uses `environment.yml`.
+
+## Verify
 
 ```bash
 python tools/check_repository.py
-python -m sage.experiments.smoke_test --device cpu --stride 10
+python -m pytest -q
 ```
-
-The CPU check exercises forward/backward computation and guided generation on synthetic tensors. It does not retrain the paper's models or replace external simulator evaluation.

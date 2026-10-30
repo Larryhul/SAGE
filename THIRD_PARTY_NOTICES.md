@@ -8,7 +8,7 @@ Original MID authors: Tianpei Gu, Guangyi Chen, Junlong Li, Chunze Lin, Yongming
 
 ## Trajectron++ and embedded utilities
 
-The MID compatibility stack incorporates Trajectron++-derived components. Preserve the [MIT notice from Stanford Autonomous Systems Lab](third_party/notices/Trajectron++_LICENSE.txt). Individual source comments identify additional embedded utility origins, including `numpy_ringbuffer`; its [upstream notice](third_party/notices/numpy_ringbuffer_LICENSE.txt) is also retained.
+The MID compatibility stack incorporates Trajectron++-derived components. Preserve the [MIT notice from Stanford Autonomous Systems Lab](third_party/notices/Trajectron_LICENSE.txt). Individual source comments identify additional embedded utility origins, including `numpy_ringbuffer`; its [upstream notice](third_party/notices/numpy_ringbuffer_LICENSE.txt) is also retained.
 
 ## Scope
 

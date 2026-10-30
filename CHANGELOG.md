@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 — 2026-10-30
+
+- Add a CPU guidance animation and six verified research checkpoints.
+- Document a Python 3.12 development environment and retain the original environment snapshot.
+- Add checksum-verified model downloads, configuration catalogs and Linux/Windows CPU checks.
+
 ## 2026-10-28
 
 - Add unit tests for metrics, training step and guided/unguided generation, and run them in CI.
