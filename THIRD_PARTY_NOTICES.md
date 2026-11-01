@@ -13,3 +13,8 @@ The MID compatibility stack incorporates Trajectron++-derived components. Preser
 ## Scope
 
 The repository's [MIT license](LICENSE) applies to original code and repository documentation. Upstream components retain their original notices. Manuscripts, original figures and datasets retain their respective authors' and providers' rights; they are not relicensed by the code license.
+
+## Project page assets
+
+- Geist and Geist Mono fonts (`docs/assets/fonts/`): Vercel, SIL Open Font License 1.1, https://github.com/vercel/geist-font
+- Phosphor icons (inlined in `docs/index.html`): Phosphor Icons, MIT license, https://github.com/phosphor-icons/core
