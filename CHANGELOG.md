@@ -4,6 +4,7 @@
 
 - Add a Colab quick-start notebook, README BibTeX, a ruff correctness check with pre-commit hooks, and module docstrings.
 - Replace the method figure with a high-resolution render of the paper figure; add a qualitative result example and unit tests for guidance, scenes and baselines.
+- Add a project page (`docs/index.html`).
 - Add a 1280x640 social preview image (`docs/assets/social-preview.png`).
 
 ## 0.2.0 — 2026-10-30

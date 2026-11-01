@@ -81,6 +81,8 @@ docs/          Setup, examples and experiment guides
 provenance/    File origins and checksums
 ```
 
+The top-level `models/`, `dataset/`, `environment/`, `evaluation/`, `utils/`, `mid.py`, `main.py`, `process_data.py` and `visualisation.py` are MID/Trajectron++ compatibility code kept in place because archived checkpoints and processed data reference these module paths. See [third-party notices](THIRD_PARTY_NOTICES.md).
+
 ## Citation
 
 Please cite the [paper](https://arxiv.org/abs/2607.16619) when using SAGE in research. [BibTeX](docs/citation.bib) · [CITATION.cff](CITATION.cff).

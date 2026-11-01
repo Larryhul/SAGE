@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAGE: A Socially-Aware Generative Engine for Heterogeneous Multi-Agent Navigation</title>
+<meta name="description" content="SAGE jointly generates robot plans and surrounding-agent trajectories, then refines robot motion with safety and social guidance.">
+<meta property="og:title" content="SAGE"><meta property="og:description" content="SAGE jointly generates robot plans and surrounding-agent trajectories, then refines robot motion with safety and social guidance.">
+<meta property="og:image" content="https://larryhul.github.io/SAGE/assets/social-preview.png">
+<style>
+:root{--bg:#101c35;--card:#1b2a45;--ink:#eef2f9;--mute:#9db0cf;--acc:#f0a07a;--line:#2a3b5c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:920px;margin:0 auto;padding:40px 20px 72px}h1{font-family:Georgia,serif;font-size:2.4rem;line-height:1.2;margin:.2em 0}
+h2{font-family:Georgia,serif;margin:2.2em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+.tag{color:var(--acc);letter-spacing:.08em;font-size:.8rem;text-transform:uppercase}.authors{color:var(--mute)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}.links a{background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none;padding:8px 16px;border-radius:999px}
+.links a:hover{border-color:var(--acc)}img{max-width:100%;height:auto;border-radius:10px;display:block;margin:12px auto;background:#fff}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid var(--line);padding:9px 12px;text-align:left}th{background:var(--card)}
+pre{background:#0b1427;border:1px solid var(--line);border-radius:10px;padding:14px;overflow:auto;font-size:.85rem}code{font-family:ui-monospace,Consolas,monospace}
+.note{color:var(--mute);font-size:.9rem}ul{padding-left:1.2em}a{color:var(--acc)}footer{margin-top:3em;color:var(--mute);font-size:.85rem}
+</style></head><body><main>
+<div class="tag">Multi-robot social navigation</div>
+<h1>SAGE: A Socially-Aware Generative Engine for Heterogeneous Multi-Agent Navigation</h1>
+<p class="authors">Lan Hu, Minghui Liwang, Wenbo Zhu, Xinlei Yi, Yiguang Hong, Xianbin Wang, Zhenzhen Jiao, Seyyedali Hosseinalipour</p>
+<nav class="links"><a href="https://arxiv.org/abs/2607.16619">Paper (arXiv)</a><a href="https://github.com/Larryhul/SAGE">Code</a><a href="https://github.com/Larryhul/SAGE/blob/main/docs/reproduction.md">Reproduction</a><a href="https://github.com/Larryhul/SAGE/blob/main/results/README.md">Results</a><a href="https://colab.research.google.com/github/Larryhul/SAGE/blob/main/notebooks/quickstart.ipynb">Colab</a></nav>
+<img src="assets/hero.png" alt="SAGE" style="background:none">
+<h2>Overview</h2><p>SAGE jointly generates robot plans and surrounding-agent trajectories, then refines robot motion with safety and social guidance.</p><ul><li><b>Encode heterogeneous interactions:</b> directed, role-aware graph representations.</li><li><b>Generate joint futures:</b> conditional diffusion for robot plans and entity trajectories.</li><li><b>Refine robot motion:</b> differentiable safety, social, kinematic and goal guidance at inference.</li></ul>
+<h2>Method</h2><img src="assets/method.png" alt="SAGE method overview" style="max-width:560px">
+<h2>Demo</h2><p class="note">The CPU example refines a crossing-scene robot trajectory while keeping entity predictions fixed. Runs on CPU with no dataset.</p><img src="assets/demo.gif" alt="SAGE CPU demonstration" style="max-width:640px"><pre><code>python -m sage.demo --output outputs/demo</code></pre>
+<h2>Results</h2><table><tr><th>Setting</th><th>Reported result</th></tr><tr><td>ETH/UCY</td><td>Prediction, guidance and ablation records using a target-as-robot proxy</td></tr><tr><td>Stanford Drone Dataset</td><td>Navigation results using semantic annotations</td></tr><tr><td>Synthetic navigation</td><td>Guidance trade-offs and robot-count scaling</td></tr></table><p class="note">The repository retains 44 result CSVs; protocols and status are listed in the result index.</p>
+<h2>Quick start</h2><pre><code>git clone https://github.com/Larryhul/SAGE.git
+cd SAGE
+python -m pip install -e ".[dev]"
+python -m sage.demo --output outputs/demo</code></pre>
+<h2>BibTeX</h2><pre><code>@misc{sage_manuscript,
+  title = {SAGE: A Socially-Aware Generative Engine for Heterogeneous Multi-Agent Navigation},
+  author = {Hu, Lan and Liwang, Minghui and Zhu, Wenbo and Yi, Xinlei and Hong, Yiguang and Wang, Xianbin and Jiao, Zhenzhen and Hosseinalipour, Seyyedali},
+  year = {2026},
+  eprint = {2607.16619},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2607.16619}
+}</code></pre>
+<footer>Code released under the MIT license. This page mirrors the <a href="https://github.com/Larryhul/SAGE">repository README</a>.</footer>
+</main></body></html>
