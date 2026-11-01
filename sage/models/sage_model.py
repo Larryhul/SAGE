@@ -1,3 +1,5 @@
+"""Top-level SAGE model: graph encoder, joint diffusion and optional safety-social guidance."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field

@@ -1,3 +1,5 @@
+"""Adapters that convert MID/Trajectron++ tensors into HeterogeneousSceneBatch objects, including speed-based role assignment strategies."""
+
 from __future__ import annotations
 
 from typing import Optional

@@ -1,3 +1,5 @@
+"""SocialGym adapter for the doorway, hallway, intersection, roundabout and open scenes."""
+
 from __future__ import annotations
 
 import csv

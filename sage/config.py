@@ -1,3 +1,5 @@
+"""YAML loading and construction of SAGEConfig objects from nested dictionaries."""
+
 from __future__ import annotations
 
 from dataclasses import fields

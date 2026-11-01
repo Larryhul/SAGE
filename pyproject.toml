@@ -32,3 +32,11 @@ exclude = ["tests*", "third_party*", "data", "data.*", "paper*", "results*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra"
+
+[tool.ruff]
+target-version = "py39"
+extend-exclude = ["models", "dataset", "environment", "evaluation", "utils", "third_party", "mid.py", "main.py", "process_data.py", "visualisation.py"]
+
+[tool.ruff.lint]
+# Correctness checks only: syntax errors, undefined names and invalid constructs.
+select = ["E9", "F63", "F7", "F82"]
