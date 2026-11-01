@@ -9,7 +9,7 @@
   <a href="https://colab.research.google.com/github/Larryhul/SAGE/blob/main/notebooks/quickstart.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg"></a>
 </p>
 
-<p align="center"><a href="#quick-start">Quick start</a> · <a href="docs/reproduction.md">Experiments</a> · <a href="docs/models.md">Models</a> · <a href="results/README.md">Results</a> · <a href="https://arxiv.org/abs/2607.16619">Paper</a> · <a href="README.zh-CN.md">中文</a></p>
+<p align="center"><a href="https://larryhul.github.io/SAGE/">Project page</a> · <a href="#quick-start">Quick start</a> · <a href="docs/reproduction.md">Experiments</a> · <a href="docs/models.md">Models</a> · <a href="results/README.md">Results</a> · <a href="https://arxiv.org/abs/2607.16619">Paper</a> · <a href="README.zh-CN.md">中文</a></p>
 
 **SAGE jointly generates robot plans and surrounding-agent trajectories, then refines robot motion with safety and social guidance.**
 
